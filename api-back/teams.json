@@ -1,51 +1,42 @@
 { 
-    "_id" : ObjectId("590857441f8a2320ac5037ec"), 
+    "_id" : ObjectId("5908ad5b2fff712c20888bc5"), 
     "teamName" : "Group A", 
-    "projectName" : "tutu", 
-    "members" : "dd", 
-    "rating" : NumberInt(8), 
+    "projectName" : "LIB", 
+    "rating" : NumberInt(7), 
+    "members" : [
+        {
+            "name" : "kev7788"
+        }, 
+        {
+            "name" : "leo"
+        }, 
+        {
+            "name" : "pablo"
+        }, 
+        {
+            "name" : "gilbert"
+        }, 
+        {
+            "name" : "jessy"
+        }, 
+        {
+            "name" : "mike"
+        }
+    ], 
     "__v" : NumberInt(0)
 }
 { 
-    "_id" : ObjectId("59085981969ce11c6894557c"), 
+    "_id" : ObjectId("5908b0072fff712c20888bc6"), 
     "teamName" : "Group B", 
-    "projectName" : "topito", 
-    "members" : "hh", 
-    "rating" : NumberInt(7), 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("59085a20969ce11c6894557d"), 
-    "teamName" : "Group C", 
-    "projectName" : "tyuop", 
-    "rating" : NumberInt(2), 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("59085a4b969ce11c6894557e"), 
-    "teamName" : "Group D", 
-    "projectName" : "huyop", 
-    "rating" : NumberInt(9), 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("59085a65969ce11c6894557f"), 
-    "teamName" : "Group E", 
-    "projectName" : "guotp", 
+    "projectName" : "idk", 
     "rating" : NumberInt(3), 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("59085ae6969ce11c68945580"), 
-    "teamName" : "Group F", 
-    "projectName" : "jjj", 
-    "rating" : NumberInt(7), 
-    "__v" : NumberInt(0)
-}
-{ 
-    "_id" : ObjectId("59085c15969ce11c68945581"), 
-    "teamName" : "Group Z", 
-    "projectName" : "dbz", 
-    "rating" : NumberInt(7), 
+    "members" : [
+        {
+            "name" : "toto"
+        }, 
+        {
+            "name" : "tutu"
+        }
+    ], 
     "__v" : NumberInt(0)
 }
