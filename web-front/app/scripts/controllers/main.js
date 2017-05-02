@@ -35,7 +35,7 @@ angular.module('LostInBJTUApp')
 
     $scope.saveChanges = function() {
       RequestAPI.PUT("/team", $scope.change, SubmitResult.submitSuccess(function (response) {
-        $scope.init();
+        $scope.initMain();
         }, "Team updated!"),
         SubmitResult.submitFailure(function () {
           $scope.isBusy = false;
@@ -56,4 +56,30 @@ angular.module('LostInBJTUApp')
 
     $scope.initMain();
 
+    // MANAGE MEMBERS IN TEAM
+
+
+    $scope.addMember = function (container) {
+      container.push("");
+    };
+
+    $scope.removeMember = function (container, index) {
+      container.splice(index, 1);
+    };
+
+
+    $scope.moveMember = function (container, index, mode) {
+      var tmp;
+
+      if (mode == "down" && index != container.length - 1) {
+        tmp = container[index + 1];
+        container[index + 1] = container[index];
+        container[index] = tmp;
+      }
+      else if (mode == "up" && index != 0) {
+        tmp = container[index - 1];
+        container[index - 1] = container[index];
+        container[index] = tmp;
+      }
+    };
   });

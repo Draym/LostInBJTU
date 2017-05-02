@@ -4,7 +4,7 @@
 
 angular.module('LostInBJTUApp')
   .controller('AddTeamModalCtrl', function ($scope, $location, $uibModalInstance, RequestAPI, SubmitResult) {
-    $scope.change = {};
+    $scope.change = {members: []};
     $scope.isBusy = false;
 
     $scope.quit = function () {
@@ -14,8 +14,8 @@ angular.module('LostInBJTUApp')
     $scope.create = function () {
       $scope.isBusy = true;
       RequestAPI.POST("/team", $scope.change, SubmitResult.submitSuccess(function (response) {
-        $scope.initMain();
-        $scope.quit();
+          $scope.initMain();
+          $scope.quit();
         }, "Team created!"),
         SubmitResult.submitFailure(function () {
           $scope.isBusy = false;

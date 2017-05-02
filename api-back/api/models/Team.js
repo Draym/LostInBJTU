@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var teamSchema = new Schema({
   teamName: { type: String, required: true, unique: true },
     projectName: String,
-    members: String,
+    members: Array,
     rating: Number
 });
 
