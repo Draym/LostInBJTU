@@ -14,6 +14,6 @@
 
 # How to run :
 
-**[api-back]** nodemon
+**[api-back]** nodemon ./bin/wwww
 
 **[web-front]** grunt serve
