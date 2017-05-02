@@ -23,7 +23,10 @@
                   data-ng-click="detailTeam($index)"
                   data-ng-class="{'background-select': focus == $index}">
                 <td>{{group.teamName}}</td>
-                <td>{{group.rating}}</td>
+                <td>{{group.rating}}
+                  <i class="fa fa-trash pull-right" style="color:#c9302c" data-ng-click="deleteTeam($index)"
+                     aria-hidden="true"></i>
+                </td>
               </tr>
               </tbody>
             </table>
@@ -59,7 +62,7 @@
                 <table class="table table-striped customTab">
                   <tbody style="max-height: 160px;">
                   <tr data-ng-repeat="member in change.members track by $index">
-                    <td><input class="form-control" data-ng-model="change.members[$index]" type="text" required></td>
+                    <td><input class="form-control" data-ng-model="change.members[$index].name" type="text" required></td>
                     <td class="text-center">
                       <div class="col-md-9" style="padding-right: 0">
                         <button class="btn btn-danger btn-xs pull-right"

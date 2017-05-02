@@ -7,7 +7,6 @@ var Team = require('../models/Team.js');
 
 
 router.delete('/', function (req, res, next) {
-    console.log(req.query);
     Team.findByIdAndRemove(req.query.id, function (err) {
         if (err) {
             res.send({success: false, message: 'Internal error', errcode: 7});
@@ -19,6 +18,7 @@ router.delete('/', function (req, res, next) {
 });
 
 router.put('/', function (req, res, next) {
+    req.body.members = JSON.parse(req.body.members);
     Team.findByIdAndUpdate(req.body._id, req.body, function (err) {
         if (err) {
             res.send({success: false, message: 'No team find', errcode: 4});
@@ -44,7 +44,7 @@ router.post('/', function (req, res, next) {
     var team = new Team({
         teamName: req.body.teamName,
         projectName: req.body.projectName,
-        members: req.body.members,
+        members:  JSON.parse(req.body.members),
         rating: req.body.rating
     });
 
