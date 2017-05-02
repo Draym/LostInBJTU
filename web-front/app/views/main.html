@@ -1,0 +1,80 @@
+<div>
+  <div class="panel panel-default">
+
+    <div class="panel-heading">
+      <button class="btn btn-primary" data-ng-click="openAddTeamModal()">
+        <span class="glyphicon glyphicon-circle-arrow-right"></span> <span>Add Team&nbsp;</span>
+      </button>
+    </div>
+
+    <div class="panel-body">
+      <div class="col-md-3">
+        <div class="row">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+              <tr>
+                <th class="col-md-2">Groups</th>
+                <th class="col-md-1"></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr data-ng-repeat="group in teams track by $index"
+                  data-ng-click="detailTeam($index)"
+                  data-ng-class="{'background-select': focus == $index}">
+                <td>{{group.teamName}}</td>
+                <td>{{group.rating}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-7" style="margin-top:20px">
+        <div class="row" data-ng-if="focus != -1">
+          <div class="col-md-7 personal-info">
+
+            <form class="form-horizontal" role="form">
+
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="field_team">Team name</label>
+                <div class="col-md-8">
+                  <input class="form-control" data-ng-model="change.teamName" type="text" id="field_team">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="field_project">Project name</label>
+                <div class="col-md-8">
+                  <input class="form-control" data-ng-model="change.projectName" type="text" id="field_project">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="field_members">Team members</label>
+                <div class="col-md-8">
+                  <input class="form-control" data-ng-model="change.members" type="text" id="field_members">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="field_rating">Global rating</label>
+                <div class="col-md-8">
+                  <input class="form-control" data-ng-model="change.rating" type="text" id="field_rating">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-8">
+                  <input class="btn btn-primary btn-edit" data-ng-click="saveChanges()" value="Save Changes"
+                         type="button"/>
+                  <span></span>
+                  <input class="btn btn-default" data-ng-click="cancelChanges()" value="Cancel" type="button"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<form name="editForm" role="form" novalidate>
+  <div class="modal-header">
+    <h2 class="modal-title" id="myOrderLabel">Team : creation</h2>
+  </div>
+  <div class="modal-body" style="display: flex">
+
+    <div class="col-md-12">
+      <div class="row col-md-12">
+        <form class="form-horizontal" role="form">
+
+          <div class="form-group">
+            <label class="col-md-3 control-label" for="field_team">Team name</label>
+            <div class="col-md-8">
+              <input class="form-control" data-ng-model="change.teamName" type="text" id="field_team" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label" for="field_project">Project name</label>
+            <div class="col-md-8">
+              <input class="form-control" data-ng-model="change.projectName" type="text" id="field_project" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label" for="field_members">Team members</label>
+            <div class="col-md-8">
+              <input class="form-control" data-ng-model="change.members" type="text" id="field_members">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label" for="field_rating">Global rating</label>
+            <div class="col-md-8">
+              <input class="form-control" data-ng-model="change.rating" type="number" id="field_rating" required>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" data-ng-disabled="isBusy"
+            data-ng-click="quit()">
+      <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+    </button>
+    <button type="submit" formnovalidate data-ng-disabled="editForm.$invalid || isBusy"
+            class="btn btn-primary"
+            data-dismiss="modal"
+            data-ng-click="create()">
+      <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Create</span>
+    </button>
+  </div>
+</form>
