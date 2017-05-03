@@ -57,7 +57,7 @@ angular.module('LostInBJTUApp')
     $scope.initMain = function () {
       $scope.isBusy = true;
       RequestAPI.GET("/team", SubmitResult.submitSuccess(function (response) {
-          $scope.teams = response.data.teams;
+          $scope.teams = response.data;
           $scope.isBusy = false;
         }),
         SubmitResult.submitFailure(function () {
