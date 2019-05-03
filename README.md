@@ -5,7 +5,7 @@
 # How to install :
 
 **[MongoDB]:** 
-* install mongoDB on official website [[here | https://www.mongodb.com/download-center]]
+* install mongoDB on official website [mongoDB](https://www.mongodb.com/download-center)
 * with CMD enter "F:\Program Files\MongoDB\bin\mongod.exe" --dbpath "F:\projects\LostInBJTU\api-back\data" (with your own location)
 
 **[project]:**
